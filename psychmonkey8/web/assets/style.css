@@ -1,0 +1,484 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+  font-family: Calibri, sans-serif, Arial; 
+}
+
+#videoContainer
+{
+  margin: 5px auto 20px auto;
+  padding: 5px;
+  width: 600px;
+  height: auto;
+
+}
+
+#console
+{
+  margin: 5px auto 20px auto;
+  padding: 5px;
+  width: 50px;
+  height: auto;
+}
+
+#table
+{
+  margin: 5px auto 20px auto;
+  padding: 5px;
+  width:1040px;
+  min-height: 600px;
+  height:auto;
+  border-radius:5px;
+}
+#indexes
+{
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  min-height:550px;
+  height:auto;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  border-color:#FC0;
+  text-align:right;
+
+  float: left;
+}
+.indexesHeader
+{
+  width: 190px;
+  height: 30px;
+  padding:5px;
+  border-bottom-style:solid;
+  border-bottom-color:#999;
+  border-width:1px;
+  text-align:center;
+  font-size:14px;
+}
+.indexesBody
+{
+  width: 190px;
+  min-height: 450px;
+  height:auto;
+  padding:5px;
+  font-size:14px;
+}
+
+.indexText
+{
+  max-width: 187px;
+  min-height:12px;
+  height:auto;
+  margin-top: 13px;
+  padding-bottom:0px;
+  font-size:14px;
+  color:#303233;
+  font-weight:400;
+  cursor: pointer;
+}
+
+.indexTextNonDrag
+{
+  max-width: 187px;
+  min-height:12px;
+  height:auto;
+  margin-top: 13px;
+  padding-bottom:0px;
+  font-size:14px;
+  color:#303233;
+  font-weight:400;
+  cursor: pointer;
+}
+
+.indexTextSelected
+{
+  max-width: 187px;
+  min-height:12px;
+  height:auto;
+  margin-top: 13px;
+  padding-bottom:0px;
+  font-size:14px;
+  color:#00F;
+  font-weight:bold;
+  cursor: pointer;
+}
+
+#possibleObservations
+{
+  margin: 0;
+  padding: 0;
+  width: 160px;
+  min-height:550px;
+  height:auto;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  border-color:#FFF;
+  text-align:center;
+  float: left;
+}
+
+#bluebox
+{
+  margin: 0;
+  padding: 0;
+  min-width: 642px;
+  min-height:550px;
+  height:auto;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  border-color:#06C;
+  text-align:center;
+  float: left;
+}
+
+#obervationsBox
+{
+  margin: 0;
+  padding: 0px;
+  width: 160px;
+  min-height:550px;
+  height:auto;
+  border-style: none;
+  float: left;
+}
+
+.observations
+{
+  margin: 0;
+  padding: 0px;
+  width: 160px;
+  min-height:259px;
+  height:auto;
+  border-right-style:solid;
+  border-right-width:1px;
+  border-right-color:#999;
+  text-align:center;
+
+}
+
+.observationsBody
+{
+  width: 150px;
+  min-height: 234px;
+  height:auto;
+  padding:5px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+
+#findings
+{
+  margin: 0;
+  padding: 0;
+  width: 160px;
+  min-height:550px;
+  height:auto;
+  border-right-style:solid;
+  border-right-width:1px;
+  border-right-color:#999;
+  text-align:center;
+  float: left;
+}
+
+#possibleDiagnoses
+{
+  margin: 0;
+  padding: 0px;
+  width: 160px;
+  min-height:550px;
+  height:auto;
+  border-right-style:solid;
+  border-right-width:1px;
+  border-right-color:#999;
+  text-align:center;
+  float: left;
+}
+
+#plans
+{
+  margin: 0;
+  padding: 0px;
+  width: 160px;
+  min-height:550px;
+  height:auto;
+  text-align:center;
+  float: left;
+}
+
+.table_col_header
+{
+  width: 150px;
+  height: 30px;
+  padding:5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-style:solid;
+  border-bottom-color:#999;
+  border-width:1px;
+  text-align:center;
+  font-size:14px;
+}
+
+.table_col_body
+{
+  width: 150px;
+  min-height: 500px;
+  height:auto;
+  padding:5px;
+  font-size:14px;
+}
+
+.hiddenObsRow
+{
+  width: 150px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  color:#999;
+  border-style:none;
+}
+
+.emptyObsRow
+{
+  width: 150px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  color:#999;
+  border-style:none;
+}
+
+.emptyObsRowDotted
+{
+  width: 147px;
+  min-height:15px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#CCC;
+  border-radius: 5px;
+  border-style:dotted;
+  border-width:1px;
+  cursor: pointer;
+}
+
+.emptyObsRowTrans
+{
+  width: 147px;
+  min-height:15px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#CCC;
+  border-radius: 5px;
+  border-style:none;
+  border-width:0px;
+  cursor: pointer;
+}
+
+.spacer
+{
+  width: 147px;
+  min-height:0px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#CCC;
+  border-style:none;
+  border-width:0px;
+  background-color:none;
+}
+
+.possibleObsRow
+{
+  width: 143px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  padding-left:4px;
+  color:#303233;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  /*cursor: move;*/
+  text-align:left;
+}
+
+.possibleObsRowSelected
+{
+  width: 143px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  padding-left:4px;
+  color:#333;
+  border-color:#333;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  font-weight:bold;
+  /*cursor:move;*/
+  text-align:left;
+}
+
+.observationRow
+{
+  width: 143px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  padding-left:4px;
+  color:#000;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  /*cursor:move;*/
+  text-align:left;
+}
+
+.negObsRow
+{
+  width: 143px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  padding-left: 4px;
+  color:#000;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  /*cursor:move;*/
+}
+.finding_row_empty
+{
+  width: 147px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border-style:none;
+}
+
+.index_finding_row
+{
+  width: 147px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#303233;
+  font-weight:400;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  cursor:pointer;
+
+}
+
+.index_finding_row_conf
+{
+  width: 147px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#000;
+  font-weight:bold;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  cursor:pointer;
+}
+
+.observation_finding_row
+{
+  width: 147px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#303233;
+  font-weight:400;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  cursor: pointer;
+}
+
+.observation_finding_row_conf
+{
+  width: 147px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#000;
+  font-weight:bold;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  cursor: pointer;
+}
+
+.finding_row
+{
+  width: 147px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#303233;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  cursor:pointer;
+
+}
+
+.finding_row_confirmed
+{
+  width: 147px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#000;
+  font-weight:bold;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  cursor:pointer;
+}
+
+.plan_row
+{
+  width: 147px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#303233;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  cursor:pointer;
+
+}
+
+.plan_row_confirmed
+{
+  width: 147px;
+  min-height:10px;
+  margin-bottom: 3px;
+  padding-bottom:0px;
+  color:#000;
+  font-weight:bold;
+  border-radius: 5px;
+  border-style:solid;
+  border-width:1px;
+  cursor:pointer;
+}
+
+.plan_row_empty
+{
+  width: 147px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  border-style:none;
+}

@@ -1,0 +1,2601 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/craig/ontologies/2014/5/psych01"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/craig/ontologies/2014/5/psych01">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This is a first test ontology for psychiatry started 20140616.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Diagnosis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Finding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Observation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#classFinding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFindingSuggestingPlan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPlanSuggestedByDx"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPlanSuggestedByFinding"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Dsm5Code"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ADHD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PanicDisorder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PersonalityDisorderUnspecified"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PosttraumaticStressDisorder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SubstanceRelatedUnspecified"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ableToEnjoy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#affectNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agitation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#agoraphobia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#alcoholAbuse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#anhedonia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#anxiety"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#aphasia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#appearanceNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#associationsNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#attentionDecreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#auditoryHallucination"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#avoidFriends"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#avoidGoingOut"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#avoidShopping"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#betterOverall"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bluntedAffect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cannabisAbuse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cantControlWorry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cantFocus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cantRelax"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cantStayOnTask"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#catatonia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#causingDistress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#causingImpairment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#checkingCompulsively"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#chronicPain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#clingy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cognitiveLimitation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#compulsiveActions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#compulsiveChecking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#compulsiveHandwashing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#compulsiveMentalActs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#compulsiveOrdering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#compulsiveThoughts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#concentrationDecreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cryingSpells"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#delusions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#depression"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#disorganizedBehavior"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#disorganizedSpeech"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dysphoria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#easilyDistracted"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#elatedMood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#empty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#energyDecreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#energyIncreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#engagingInDangerousActivities"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#familyPsychiatricHistory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fatigue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#flashbacks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#focusDecreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#functioningDecreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fundOfKnowledgeNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#goalDirectedActivityIncreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#grandiosity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#guilty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hallucinations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#happyAffect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hateBeingAlone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#homicidalIdeation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hopeless"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hypersomnia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hypervigilance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#imagesUnwanted"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#insomnia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#interestDecreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#interpersonalFunctioningPoor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#intusiveThoughts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#irritability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#isolating"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#labileEmotions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#looseAssociations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lossOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medCompliant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medSideEffects"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medicalDisorderRelated"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medsWorkingWell"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#memoryIntact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#motivationDecreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#muscleTension"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nausea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#needForSleepDecreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nervesBad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nervous"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nightmares"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#onEdge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#otherSubstanceAbuse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#panicAttacks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pastPsychiatricHistory"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#personalityRelated"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#polypharmacy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#poorCommunication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#poorGrooming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#poorHygiene"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#poorImpulseControl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#poorLearning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prescribeAntipsychotic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prescribeMoodStabilizer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prescribeStimulant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#psychomotorAgitation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#psychomotorRetardation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#psychosis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#racingThoughts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#restless"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ruminatingThoughts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sadAffect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sadness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#seekingReassurance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#seriousMedicalProblems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#skinPicking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sleepDecreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sleepIncreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sleepNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#speechNormal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#speechPressured"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#spendingTooMuchMoney"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stressIncreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stressedOut"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#substanceRelated"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#suicidalIdeation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#suicide/homicide"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#suicideAttempt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tangentialSpeech"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tearfulness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#thoughtsOfDeath"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unreasonableFears"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unwantedThoughts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#unwantedUrges"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#visualHallucination"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#weightLoss/weightGain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#worry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#worryIncreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#worseOverall"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#worthless"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Finding"/>
+        <Class IRI="#classFinding"/>
+    </EquivalentClasses>
+    <DisjointClasses>
+        <Class IRI="#Diagnosis"/>
+        <Class IRI="#Finding"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Diagnosis"/>
+        <Class IRI="#Observation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Diagnosis"/>
+        <Class IRI="#Plan"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Finding"/>
+        <Class IRI="#Plan"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Observation"/>
+        <Class IRI="#Plan"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Diagnosis"/>
+        <NamedIndividual IRI="#ADHD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diagnosis"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diagnosis"/>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diagnosis"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diagnosis"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diagnosis"/>
+        <NamedIndividual IRI="#PanicDisorder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diagnosis"/>
+        <NamedIndividual IRI="#PersonalityDisorderUnspecified"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diagnosis"/>
+        <NamedIndividual IRI="#PosttraumaticStressDisorder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diagnosis"/>
+        <NamedIndividual IRI="#SubstanceRelatedUnspecified"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#ableToEnjoy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isObsSuggestingDx"/>
+            <Class IRI="#Diagnosis"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#ableToEnjoy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isObsSuggestingFinding"/>
+            <Class IRI="#Finding"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#ableToEnjoy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#affectNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#agitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isObsSuggestingFinding"/>
+            <Class IRI="#Finding"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#agitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#agoraphobia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#alcoholAbuse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#anhedonia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#aphasia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#appearanceNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#associationsNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#attentionDecreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#auditoryHallucination"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#avoidFriends"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#avoidGoingOut"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#avoidShopping"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#betterOverall"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#bluntedAffect"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#cannabisAbuse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#cantControlWorry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#cantFocus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#cantRelax"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#cantStayOnTask"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#catatonia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#causingDistress"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#causingImpairment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#checkingCompulsively"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#chronicPain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#cognitiveLimitation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#compulsiveActions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#compulsiveChecking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#compulsiveHandwashing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#compulsiveMentalActs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#compulsiveOrdering"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#compulsiveThoughts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#concentrationDecreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#cryingSpells"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#delusions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#depression"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#depression"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#disorganizedBehavior"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#disorganizedSpeech"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#dysphoria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#easilyDistracted"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#elatedMood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#empty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#energyDecreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#energyIncreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#engagingInDangerousActivities"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#familyPsychiatricHistory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#fatigue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#fear"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#flashbacks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#focusDecreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#functioningDecreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#fundOfKnowledgeNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#goalDirectedActivityIncreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#grandiosity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#guilty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#hallucinations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#happyAffect"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#hateBeingAlone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#homicidalIdeation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isObsSuggestingFinding"/>
+            <Class IRI="#Finding"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#homicidalIdeation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#hopeless"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#hypersomnia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#hypervigilance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#imagesUnwanted"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#insomnia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#interestDecreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#interpersonalFunctioningPoor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#intusiveThoughts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#irritability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#Finding"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#irritability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#Observation"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#irritability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#isolating"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#labileEmotions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#looseAssociations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#lossOfInterest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isObsSuggestingFinding"/>
+            <Class IRI="#Finding"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#lossOfInterest"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#medCompliant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#medSideEffects"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#medicalDisorderRelated"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#medsWorkingWell"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#memoryIntact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#motivationDecreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#muscleTension"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#nausea"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#needForSleepDecreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#nervesBad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#nervous"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+            <Class IRI="#Observation"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isFindingSuggestingDx"/>
+            <Class IRI="#Diagnosis"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#nightmares"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+            <Class IRI="#Observation"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isFindingSuggestingDx"/>
+            <Class IRI="#Diagnosis"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#onEdge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#otherSubstanceAbuse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#panicAttacks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#pastPsychiatricHistory"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#personalityRelated"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+            <Class IRI="#Observation"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#personalityRelated"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isFindingSuggestingDx"/>
+            <Class IRI="#Diagnosis"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#personalityRelated"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#polypharmacy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#poorCommunication"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isObsSuggestingFinding"/>
+            <Class IRI="#Finding"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#poorCommunication"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#poorGrooming"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#poorHygiene"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#poorImpulseControl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#poorLearning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Plan"/>
+        <NamedIndividual IRI="#prescribeAntipsychotic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Plan"/>
+        <NamedIndividual IRI="#prescribeMoodStabilizer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Plan"/>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Plan"/>
+        <NamedIndividual IRI="#prescribeStimulant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#psychomotorRetardation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#racingThoughts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Plan"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Plan"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#restless"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#ruminatingThoughts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#sadAffect"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#sadness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#Observation"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#sadness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#seekingReassurance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#seriousMedicalProblems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#sleepDecreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#sleepIncreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#sleepNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#speechNormal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#speechPressured"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#spendingTooMuchMoney"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#stressIncreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#stressedOut"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#substanceRelated"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+            <Class IRI="#Observation"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#substanceRelated"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#suicidalIdeation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#suicideAttempt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isObsSuggestingFinding"/>
+            <Class IRI="#Finding"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#suicideAttempt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#tangentialSpeech"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#tearfulness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#Observation"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#tearfulness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#tense"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#thoughtsOfDeath"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Finding"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#unreasonableFears"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#unwantedThoughts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#unwantedUrges"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#visualHallucination"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#weightLoss/weightGain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#worry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#worryIncreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#worseOverall"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Observation"/>
+        <NamedIndividual IRI="#worthless"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#agitation"/>
+        <NamedIndividual IRI="#psychomotorAgitation"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#agoraphobia"/>
+        <NamedIndividual IRI="#avoidGoingOut"/>
+        <NamedIndividual IRI="#avoidShopping"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#anhedonia"/>
+        <NamedIndividual IRI="#lossOfInterest"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#attentionDecreased"/>
+        <NamedIndividual IRI="#concentrationDecreased"/>
+        <NamedIndividual IRI="#focusDecreased"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#concentrationDecreased"/>
+        <NamedIndividual IRI="#easilyDistracted"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#cryingSpells"/>
+        <NamedIndividual IRI="#tearfulness"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#empty"/>
+        <NamedIndividual IRI="#hopeless"/>
+        <NamedIndividual IRI="#sadness"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#energyDecreased"/>
+        <NamedIndividual IRI="#fatigue"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#fatigue"/>
+        <NamedIndividual IRI="#psychomotorRetardation"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#hypersomnia"/>
+        <NamedIndividual IRI="#sleepIncreased"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#insomnia"/>
+        <NamedIndividual IRI="#sleepDecreased"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#intusiveThoughts"/>
+        <NamedIndividual IRI="#unwantedThoughts"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#muscleTension"/>
+        <NamedIndividual IRI="#tense"/>
+    </SameIndividual>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#hopeless"/>
+        <NamedIndividual IRI="#tearfulness"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#ADHD"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#ADHD"/>
+        <NamedIndividual IRI="#focusDecreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#ADHD"/>
+        <NamedIndividual IRI="#irritability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#ADHD"/>
+        <NamedIndividual IRI="#easilyDistracted"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#ADHD"/>
+        <NamedIndividual IRI="#functioningDecreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#ADHD"/>
+        <NamedIndividual IRI="#concentrationDecreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#ADHD"/>
+        <NamedIndividual IRI="#attentionDecreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#ADHD"/>
+        <NamedIndividual IRI="#prescribeStimulant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#ADHD"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+        <NamedIndividual IRI="#stressedOut"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+        <NamedIndividual IRI="#stressIncreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+        <NamedIndividual IRI="#prescribeMoodStabilizer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+        <NamedIndividual IRI="#prescribeAntipsychotic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+        <NamedIndividual IRI="#irritability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+        <NamedIndividual IRI="#prescribeAntipsychotic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+        <NamedIndividual IRI="#sadness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+        <NamedIndividual IRI="#tearfulness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+        <NamedIndividual IRI="#prescribeAntipsychotic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#PanicDisorder"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <NamedIndividual IRI="#PanicDisorder"/>
+        <NamedIndividual IRI="#agoraphobia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#PanicDisorder"/>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#PanicDisorder"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#PanicDisorder"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#PersonalityDisorderUnspecified"/>
+        <NamedIndividual IRI="#personalityRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#PersonalityDisorderUnspecified"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#PersonalityDisorderUnspecified"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#PosttraumaticStressDisorder"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#PosttraumaticStressDisorder"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#PosttraumaticStressDisorder"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#PosttraumaticStressDisorder"/>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+        <NamedIndividual IRI="#SubstanceRelatedUnspecified"/>
+        <NamedIndividual IRI="#substanceRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#SubstanceRelatedUnspecified"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <NamedIndividual IRI="#SubstanceRelatedUnspecified"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#agitation"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#agoraphobia"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#agoraphobia"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#alcoholAbuse"/>
+        <NamedIndividual IRI="#substanceRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#anhedonia"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#irritability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#agoraphobia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#restless"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#tense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#worryIncreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#racingThoughts"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#worry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#concentrationDecreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#onEdge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#avoidShopping"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#unreasonableFears"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#panicAttacks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#cantStayOnTask"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#stressIncreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#avoidGoingOut"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#nervous"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#cantControlWorry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#easilyDistracted"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#avoidFriends"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#fear"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingPlan"/>
+        <NamedIndividual IRI="#anxiety"/>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#attentionDecreased"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#attentionDecreased"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#attentionDecreased"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#attentionDecreased"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#auditoryHallucination"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#avoidFriends"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#bluntedAffect"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cannabisAbuse"/>
+        <NamedIndividual IRI="#substanceRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cantControlWorry"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cantFocus"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cantFocus"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cantFocus"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cantFocus"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cantRelax"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cantStayOnTask"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cantStayOnTask"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cantStayOnTask"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#catatonia"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#checkingCompulsively"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#chronicPain"/>
+        <NamedIndividual IRI="#medicalDisorderRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#clingy"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cognitiveLimitation"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#compulsiveActions"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#compulsiveChecking"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#compulsiveHandwashing"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#compulsiveMentalActs"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#compulsiveOrdering"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#compulsiveThoughts"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#concentrationDecreased"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#cryingSpells"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#delusions"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#delusions"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#tearfulness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#hopeless"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#worthless"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#anhedonia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#sadness"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingPlan"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingPlan"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#prescribeAntipsychotic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingPlan"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#referForTherapy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingPlan"/>
+        <NamedIndividual IRI="#depression"/>
+        <NamedIndividual IRI="#recommendCaseMgmt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#disorganizedBehavior"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#disorganizedBehavior"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#disorganizedSpeech"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#easilyDistracted"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#easilyDistracted"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#elatedMood"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#energyDecreased"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#energyIncreased"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#engagingInDangerousActivities"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#fatigue"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#fatigue"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#flashbacks"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#goalDirectedActivityIncreased"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#grandiosity"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#guilty"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#guilty"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#hallucinations"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#homicidalIdeation"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#hopeless"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#hypervigilance"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#imagesUnwanted"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#imagesUnwanted"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#interestDecreased"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#interpersonalFunctioningPoor"/>
+        <NamedIndividual IRI="#personalityRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#intusiveThoughts"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#intusiveThoughts"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#irritability"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#irritability"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#irritability"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#irritability"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#isolating"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#labileEmotions"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#labileEmotions"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#labileEmotions"/>
+        <NamedIndividual IRI="#personalityRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#lossOfInterest"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#motivationDecreased"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#muscleTension"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#muscleTension"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#nausea"/>
+        <NamedIndividual IRI="#medicalDisorderRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#needForSleepDecreased"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#nervesBad"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#nervous"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#nervous"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+        <NamedIndividual IRI="#poorCommunication"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+        <NamedIndividual IRI="#ADHD"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#nightmares"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingPlan"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+        <NamedIndividual IRI="#prescribeSSRI"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#onEdge"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#onEdge"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#onEdge"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#otherSubstanceAbuse"/>
+        <NamedIndividual IRI="#substanceRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#panicAttacks"/>
+        <NamedIndividual IRI="#PanicDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#panicAttacks"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#personalityRelated"/>
+        <NamedIndividual IRI="#PersonalityDisorderUnspecified"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#polypharmacy"/>
+        <NamedIndividual IRI="#medicalDisorderRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#poorCommunication"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#poorGrooming"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#poorHygiene"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#poorImpulseControl"/>
+        <NamedIndividual IRI="#personalityRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#poorImpulseControl"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#poorLearning"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#psychomotorRetardation"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#psychosis"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#psychosis"/>
+        <NamedIndividual IRI="#BipolarUnspecified"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#racingThoughts"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#racingThoughts"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#restless"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#restless"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#restless"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#ruminatingThoughts"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#ruminatingThoughts"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#ruminatingThoughts"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#ruminatingThoughts"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#sadness"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#seekingReassurance"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#seriousMedicalProblems"/>
+        <NamedIndividual IRI="#medicalDisorderRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#skinPicking"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#skinPicking"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#sleepDecreased"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#sleepDecreased"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#speechPressured"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#spendingTooMuchMoney"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#stressedOut"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#substanceRelated"/>
+        <NamedIndividual IRI="#SubstanceRelatedUnspecified"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#suicidalIdeation"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#suicidalIdeation"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+        <NamedIndividual IRI="#suicidalIdeation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+        <NamedIndividual IRI="#thoughtsOfDeath"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+        <NamedIndividual IRI="#homicidalIdeation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+        <NamedIndividual IRI="#suicideAttempt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#suicideAttempt"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#tangentialSpeech"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#tangentialSpeech"/>
+        <NamedIndividual IRI="#maniaHypomania"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#tearfulness"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#thoughtsOfDeath"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#thoughtsOfDeath"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#thoughtsOfDeath"/>
+        <NamedIndividual IRI="#suicide/homicide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+        <NamedIndividual IRI="#worry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+        <NamedIndividual IRI="#stressIncreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+        <NamedIndividual IRI="#attentionDecreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+        <NamedIndividual IRI="#onEdge"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+        <NamedIndividual IRI="#AdjustmentDisorderDepressedMood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+        <NamedIndividual IRI="#PosttraumaticStressDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#unwantedThoughts"/>
+        <NamedIndividual IRI="#traumaRelated"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#unwantedThoughts"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#unwantedUrges"/>
+        <NamedIndividual IRI="#obsessionsAndCompulsions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#visualHallucination"/>
+        <NamedIndividual IRI="#psychosis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#worry"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#worry"/>
+        <NamedIndividual IRI="#anxiety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#worthless"/>
+        <NamedIndividual IRI="#depression"/>
+    </ObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#ableToEnjoy"/>
+        <NamedIndividual IRI="#depression"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#elatedMood"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#elatedMood"/>
+        <NamedIndividual IRI="#depression"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+        <NamedIndividual IRI="#energyIncreased"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#energyIncreased"/>
+        <NamedIndividual IRI="#depression"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <NamedIndividual IRI="#fundOfKnowledgeNormal"/>
+        <NamedIndividual IRI="#neurodevelopmental"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#medicalDisorderRelated"/>
+        <NamedIndividual IRI="#GeneralizedAnxietyDisorder"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <NamedIndividual IRI="#medicalDisorderRelated"/>
+        <NamedIndividual IRI="#MajorDepressiveDisorder"/>
+    </NegativeObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isFindingSuggestingDx"/>
+        <ObjectProperty IRI="#isDxSuggestedByFinding"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isDxSuggestedByObs"/>
+        <ObjectProperty IRI="#isObsSuggestingDx"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isDxSuggestingPlan"/>
+        <ObjectProperty IRI="#isPlanSuggestedByDx"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isObsSuggestingFinding"/>
+        <ObjectProperty IRI="#isFindingSuggestedByObs"/>
+    </InverseObjectProperties>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

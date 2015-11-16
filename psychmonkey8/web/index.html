@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PsychMonkey8</title>
+    <link href="assets/style.css" rel="stylesheet"  />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <script src="assets/PMMain.js" type="text/javascript"></script>
+    <!--This Library contain main functions-->
+    <script src="assets/PMMain.js" type="text/javascript"></script>
+    <!--This Library deals with all events (drag, drop, click, double click)-->
+    <script src="assets/PMEventHandler.js" type="text/javascript"></script>
+
+    <script>
+
+      
+    </script>
+  </head>
+
+  <body onload="init()">
+
+    <!--
+                    
+                   <div id="videoContainer">
+                    
+                    Monkey Logo
+                    <img src="assets/icon_small.png" style="float:left;" />
+                    
+                            This method causes compability issues in Opera
+                            <object width="450" height="300" data="http://www.youtube.com/v/lPmOcJ9YdYw">
+                    </object>
+                 <table width="622" border="0">
+            
+              <tr>
+                <td width="99" align="left" valign="bottom">
+            <input type="button" name="resetButton" value="Reset Form" onclick="resetForm()" /></td>
+                <td width="425"><embed width="420" height="250" src="http://www.youtube.com/v/lPmOcJ9YdYw"> </embed>
+            </td>
+                <td width="62">&nbsp;</td>
+              </tr>
+            </table>       
+            </div>
+            
+    --> 
+
+    <div id="header" style="width:100%;" >
+      <img src="assets/VBH logo.png" alt="Volunteer" style="position:absolute; float:left; width:25%;" />
+      <br/>
+      <span style="position:absolute; left:15%; color:#00248F; font-size:1.1em;"><b>PSYCHIATRIC PATIENT ENCOUNTER</b></span>
+    </div>
+    <div id="table" style="position:absolute; top:10%; width:100%">
+      <div id="indexes">
+        <div class="indexesHeader">
+          <strong>Indexes</strong>
+        </div>
+        <div class="indexesBody" id="indexBody" ondrop="drop(event)" ondragover="allowDrop(event)" >
+
+          <p id="DEFAULT_" class="indexTextNonDrag" onclick="indexIsSelected(event)" draggable="true" ondrag="noDrag(event)">DEFAULT</p>
+          <p id="MENTALSTATUSEXAM_" class="indexTextNonDrag" onclick="indexIsSelected(event)" draggable="true" ondrag="noDrag(event)">MENTAL STATUS EXAM</p>
+        </div>
+      </div>
+
+      <div id="possibleObservations">
+        <div class="table_col_header">
+          <strong>Possible Observations</strong>
+        </div>
+        <div class="table_col_body" id="possibleObservationsBody" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+      </div>
+
+      <div id="bluebox">
+
+        <div id="obervationsBox">
+          <div class="observations">
+            <div class="table_col_header" >
+              <strong>Observations</strong>
+            </div>
+            <div class="observationsBody" id="observationsBody" ondrop="drop(event)" ondragover="allowDrop(event)" >
+
+            </div>
+          </div>
+
+          <div class="observations">
+            <div class="table_col_header" >
+              <strong>Negative Observations</strong>
+            </div>
+            <div class="observationsBody" id="negativeObservationsBody" ondrop="drop(event)" ondragover="allowDrop(event)" >
+
+            </div>
+          </div>
+        </div>
+        <div id="findings">
+          <div class="table_col_header">
+            <strong>Problems</strong>
+          </div>
+          <div class="table_col_body" id="findingsBody" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+        </div>
+
+        <div id="possibleDiagnoses">
+          <div class="table_col_header">
+            <strong>Diagnoses & Differential</strong>
+          </div>
+          <div class="table_col_body" id="diagnosisBody">
+          </div>
+        </div>
+
+        <div id="plans">
+          <div class="table_col_header">
+            <strong>Plans</strong>
+          </div>
+          <div class="table_col_body" id="planBody">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="debugger" style="visibility:hidden;">
+      <span id="debugmes1" style="color:red;">1</span><br />
+      <span id="debugmes2" style="color:blue;">2</span><br />
+      <span id="debugmes3" style="color:green;">3</span><br />
+    </div>
+
+    <div id="clonableObjectStorage" style="visibility:hidden;">
+      <div id="cloneableObs" class="hiddenObsRow" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)"  onclick="obsClick(event)" ondblclick="onDoubleClickObservatoin(event)"></div>
+
+
+      <div id="cloneableEmptyPosObs" class="emptyObsRowTrans" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)" onclick="deleteEmptyPosObs(event)"></div>
+
+      <div id="cloneableEmptyObs" class="emptyObsRowDotted" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)" onclick="deleteEmptyObs(event)"></div>
+
+      <div id="cloneableObservationFinding" class="observation_finding_row" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)" onclick="undefinedClick(event)"></div>
+      <div id="cloneableConfObservationFinding" class="observation_finding_row_conf" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)" onclick="undefinedClick(event)"></div>
+      <div id="cloneableEmptyObsFind" class="emptyObsRowDotted" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)" onclick="deleteEmptyObsFind(event)"></div>
+
+
+      <div id="cloneableConfIndexFinding" class="index_finding_row_conf" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)" onclick="unconfirmIndexFinding(event)"></div>
+
+      <div id="cloneableFinding" class="finding_row" onclick="confirmFinding(event)" ondblclick="onDoubleClickFinding(event)"  draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)"></div>
+      <div id="cloneableConfirmedFinding" class="finding_row_confirmed" onclick="unconfirmFinding(event)" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)"></div>
+      <div id="cloneableDiagnosis" class="finding_row" onclick="confirmDiagnosis(event)"></div>
+      <div id="cloneableConfirmedDiagnosis" class="finding_row_confirmed" onclick="unconfirmDiagnosis(event)"></div>
+
+      <div id="cloneableIndex" class="indexText" onclick="indexIsSelected(event)" draggable="true" ondragstart="drag(event)"></div>
+      <div id="cloneableIndexFinding" class="index_finding_row" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)" onclick="confirmIndexFinding(event)"></div>
+
+      <div id="cloneablePlan" class="plan_row" onclick="confirmPlan(event)" ondblclick="onDoubleClickPlan(event)"  draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)"></div>
+      <div id="cloneableConfirmedPlan" class="plan_row_confirmed" onclick="unconfirmPlan(event)" draggable="true" ondragstart="drag(event)" ondragover="dragOver(event)" ondragleave="dragOut(event)"></div>
+    </div>
+  </body>
+</html>
